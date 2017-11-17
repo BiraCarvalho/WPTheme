@@ -1,0 +1,30 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Rosa Berardo - Site\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-11-03 03:37+0000\n"
+"PO-Revision-Date: 2017-11-03 03:39+0000\n"
+"Last-Translator: birah <birah.carvalho@gmail.com>\n"
+"Language-Team: French (France)\n"
+"Language: fr-FR\n"
+"Plural-Forms: nplurals=2; plural=n > 1\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco - https://localise.biz/"
+
+#: header.php:39 header.php:46
+msgid "sobre"
+msgstr "à propos"
+
+#: header.php:40 header.php:47
+msgid "filmes"
+msgstr "films"
+
+#: header.php:41 header.php:48
+msgid "fotografias"
+msgstr "photos"
+
+#: header.php:42 header.php:49
+msgid "contato"
+msgstr "contactez"

@@ -1,8 +1,4 @@
-<?php 
-$section_page_id = 12; 
-$section_page_id = pll_get_post($section_page_id) ?: $section_page_id;
-?>
-
+<?php $section_page_id = 12; ?>
 <section class="about" id="section-about" >
   <div class="wrap-section">
     <div class="photo">

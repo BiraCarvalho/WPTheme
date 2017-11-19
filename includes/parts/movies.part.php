@@ -1,6 +1,6 @@
-<?php 
-$section_page_id = 12; 
-$section_page_id = pll_get_post($section_page_id) ?: $section_page_id;
+<?php
+$section_page_id = 199;
+$section_page    = get_post($section_page_id);
 
 $args = array(
   'post_type' => 'movies',
@@ -14,7 +14,7 @@ $loop = new WP_Query( $args );
 ?>
 <section class="movies" id="section-movie" >
   <header>
-    <h1>Filmes</h1>
+    <h1><?=wpm_translate_string(get_the_title($section_page_id))?></h1>
     <a href="<?=get_page_link($section_page_id)?>" >veja mais</a>
   </header>
   <div class="wrap-section boxes">
@@ -26,20 +26,20 @@ $loop = new WP_Query( $args );
           <div class="legend">
             <div>
               <h2>
-                <?=get_the_title()?><br>                
-                
-                <?php if( pll_current_language() != "pt" ){ ?>
-                <small class="translation"><?=get_field( "movies-titulo-" . pll_current_language(), get_the_ID() )?></small><br>
+                <?=get_the_title()?><br>
+
+                <?php if( wpm_get_language() != "pt" ){ ?>
+                <small class="translation"><?=get_field( "movies-titulo-" . wpm_get_language(), get_the_ID() )?></small><br>
                 <?php } ?>
 
                 <small>
-                  <?=get_field( "movies-genero", get_the_ID() )?> - 
+                  <?=get_field( "movies-genero", get_the_ID() )?> -
                   <?=get_field( "movies-minutagem", get_the_ID() )?>
                 </small>
               </h2>
-            </div>            
+            </div>
             <span class="icon-play glyphicon glyphicon-play-circle"></span>
-          </div>          
+          </div>
         </a>
       </article>
      <?php endwhile; ?>

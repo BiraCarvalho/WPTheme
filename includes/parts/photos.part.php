@@ -1,22 +1,19 @@
-<?php 
-  
-  $section_page_id = 200; 
-  $section_page_id = pll_get_post($section_page_id) ?: $section_page_id;
+<?php
+  $section_page_id = 200;
 
   $args = array(
     'post_type' => 'photos',
     'posts_per_page' => 4,
     'orderby'=>'title',
     'order'=>'ASC',
-    //'post_parent' => $section_page_id
   );
   $loop = new WP_Query( $args );
 
 ?>
 <section class="photos" id="section-photos" >
   <header>
-    <h1>Fotografias</h1>
-    <a href="<?=get_page_link($section_page_id)?>" >veja mais</a>
+    <h1><?=wpm_translate_string(get_the_title($section_page_id))?></h1>
+    <a href="<?=wpm_translate_url(get_page_link($section_page_id))?>" >veja mais</a>
   </header>
   <div class="wrap-section boxes">
 

@@ -20,7 +20,7 @@
         <span class="icon-bar"></span>
       </button>
       <span class="brand navbar-brand" >
-        <a href="#">
+        <a href="<?=home_url()?>">
           <span>Rosa</span><span>Berardo</span>
         </a>
         <img src="<?=rosaberardo__get_image( "marca.svg" )?>" />
@@ -35,13 +35,14 @@
         <li><a href="/#section-movie"><?=__("filmes","rb") ?></a></li>
         <li><a href="/#section-photos"><?=__("fotografias","rb")?></a></li>
         <li><a href="/#section-contact"><?=__("contato","rb") ?></a></li>
-      </ul>
+    </ul>
       <?php } else { ?>
+      <?php $__SITE_URL = trim(wpm_translate_url(get_site_url()),"/")?>
       <ul class="navigation nav navbar-nav navbar-center">
-        <li><a href="/sobre"><?=__("sobre","rb") ?></a></li>
-        <li><a href="/filmes"><?=__("filmes","rb") ?></a></li>
-        <li><a href="/fotografias"><?=__("fotografias","rb") ?></a></li>
-        <li><a href="/#section-contact"><?=__("contato","rb") ?></a></li>
+        <li><a href="<?=$__SITE_URL?>/about"><?=__("sobre","rb") ?></a></li>
+        <li><a href="<?=$__SITE_URL?>/page-movies"><?=__("filmes","rb") ?></a></li>
+        <li><a href="<?=$__SITE_URL?>/page-photos"><?=__("fotografias","rb") ?></a></li>
+        <li><a href="<?=home_url()?>/#section-contact"><?=__("contato","rb") ?></a></li>
       </ul>
       <?php } ?>
 
@@ -57,8 +58,8 @@
           </a>
         </li>
         <li class="language" >
-            <a href="/" >pt</a>
-            <a href="/en" >en</a>        
+            <a href="<?=get_site_url()?>/" >pt</a>
+            <a href="<?=get_site_url()?>/en" >en</a>
         </li>
       </ul>
 

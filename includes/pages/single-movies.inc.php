@@ -2,9 +2,9 @@
 
 	<header>
 		<h1>Filmes</h1>
-	</header>  
+	</header>
 
-	<div class="wrap-section">  
+	<div class="wrap-section">
     <?php $sidebar_menu = rosaberardo__page_menu( "movies", get_the_ID() ); ?>
     <aside class="sidebar">
       <ul class="nav nav-pills nav-stacked" >
@@ -15,7 +15,7 @@
         <?php } ?>
       </ul>
     </aside>
-    
+
     <article class="content">
 		<?php if ( have_posts() ) while ( have_posts() ) {  the_post(); ?>
 		  <h2><?php the_title(); ?></h2>

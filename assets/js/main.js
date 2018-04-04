@@ -15,7 +15,7 @@ var pageScroll = function( element, event ){
       scrollTop: top
     }, 800, function(){
 
-    	if ( history.pushState ) {
+        if ( history.pushState ) {
         history.pushState(null, null, hash);
       } else {
         location.hash = hash;
@@ -34,28 +34,28 @@ var changeClassLinkMenu = function( element ){
 
 jQuery(function(){
 
-  var menu = jQuery("#menu-principal .navigation li");
-  var hash = location.hash;
+//   var menu = jQuery("#menu-principal .navigation li");
+//   var hash = location.hash;
 
-  if( hash ){
+//   if( hash ){
 
-    pageScroll( location, event );
-    changeClassLinkMenu(   menu.children("a[href$='"+hash+"']") );
+//     pageScroll( location, event );
+//     changeClassLinkMenu(   menu.children("a[href$='"+hash+"']") );
 
-  } else {
+//   } else {
 
-    var basename = location.pathname.replace(/\b\//g,"");
-    changeClassLinkMenu( menu.children("a[href*='"+basename+"']") );
+//     var basename = location.pathname.replace(/\b\//g,"");
+//     changeClassLinkMenu( menu.children("a[href*='"+basename+"']") );
 
-  }
+//   }
 
-  menu.children('a').on('click', function(event) {
+//   menu.children('a').on('click', function(event) {
 
-    if ( this.hash ) {
-      pageScroll( this, event );
-      changeClassLinkMenu( jQuery(this) );
-    }
+//     if ( this.hash ) {
+//       pageScroll( this, event );
+//       changeClassLinkMenu( jQuery(this) );
+//     }
 
-  });
+//   });
 
 });

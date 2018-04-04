@@ -9,5 +9,5 @@
 ?>
 
 <?php get_header(); ?>
-<?php rosaberardo__get_page( "category" ); ?>
+<?php wpbasetheme__get_page( "category" ); ?>
 <?php get_footer(); ?>

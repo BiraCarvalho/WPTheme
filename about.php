@@ -14,5 +14,5 @@
 ?>
 
 <?php get_header(); ?>
-<?php rosaberardo__get_page( "about" ); ?>
+<?php wpbasetheme__get_page( "about" ); ?>
 <?php get_footer(); ?>

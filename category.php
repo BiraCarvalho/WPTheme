@@ -9,5 +9,5 @@
 ?>
 
 <?php get_header(); ?>
-<?php wpbasetheme__get_page( "category" ); ?>
+<?php WPBaseTheme___get_page( "category" ); ?>
 <?php get_footer(); ?>

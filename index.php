@@ -1,3 +1,3 @@
 <?php get_header(); ?>
-<?php wpbasetheme__get_page( "home" ); ?>
+<?php WPBaseTheme___get_page( "home" ); ?>
 <?php get_footer(); ?>

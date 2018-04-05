@@ -5,7 +5,7 @@
   </header>
 
 	<div class="wrap-section">  
-    <?php $sidebar_menu = wpbasetheme__page_menu( "photos", get_the_ID() ); ?>
+    <?php $sidebar_menu = WPBaseTheme___page_menu( "photos", get_the_ID() ); ?>
     <aside class="sidebar">
       <ul class="nav nav-pills nav-stacked" >
         <?php foreach( $sidebar_menu as $menu_item ){ ?>

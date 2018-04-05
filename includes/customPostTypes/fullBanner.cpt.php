@@ -1,15 +1,15 @@
 <?php
 
-if ( !function_exists('wpbasetheme_post_type_photos') ) {
+if ( !function_exists('WPBaseTheme__PostTypeFullBanner') ) {
 
 // Register Custom Post Type
-function wpbasetheme_post_type_photos() {
+function WPBaseTheme__PostTypeFullBanner() {
 
 	$labels = array(
-		'name'                  => _x( 'Fotografias', 'Post Type General Name', 'wpbasetheme' ),
-		'singular_name'         => _x( 'Fotografia', 'Post Type Singular Name', 'wpbasetheme' ),
-		'menu_name'             => __( 'Fotografias', 'wpbasetheme' ),
-		'name_admin_bar'        => __( 'Fotografia', 'wpbasetheme' ),
+		'name'                  => _x( 'Banners', 'Post Type General Name', 'wpbasetheme' ),
+		'singular_name'         => _x( 'Banner', 'Post Type Singular Name', 'wpbasetheme' ),
+		'menu_name'             => __( 'Banners', 'wpbasetheme' ),
+		'name_admin_bar'        => __( 'Banner', 'wpbasetheme' ),
 		'archives'              => __( 'Item Archives', 'wpbasetheme' ),
 		'attributes'            => __( 'Item Attributes', 'wpbasetheme' ),
 		'parent_item_colon'     => __( 'Parent Item:', 'wpbasetheme' ),
@@ -35,8 +35,8 @@ function wpbasetheme_post_type_photos() {
 		'filter_items_list'     => __( 'Filter items list', 'wpbasetheme' ),
 	);
 	$args = array(
-		'label'                 => __( 'Fotografia', 'wpbasetheme' ),
-		'description'           => __( 'Postagem de Fotografias', 'wpbasetheme' ),
+		'label'                 => __( 'Banner', 'wpbasetheme' ),
+		'description'           => __( 'Postagem de Banners', 'wpbasetheme' ),
 		'labels'                => $labels,
 		'supports'              => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'revisions' ),
 		'taxonomies'            => array( 'category' ),
@@ -45,7 +45,7 @@ function wpbasetheme_post_type_photos() {
 		'show_ui'               => true,
 		'show_in_menu'          => true,
 		'menu_position'         => 5,
-		'menu_icon'             => 'dashicons-camera',
+		'menu_icon'             => 'dashicons-gallery-alt',
 		'show_in_admin_bar'     => true,
 		'show_in_nav_menus'     => true,
 		'can_export'            => true,
@@ -54,10 +54,10 @@ function wpbasetheme_post_type_photos() {
 		'publicly_queryable'    => true,
 		'capability_type'       => 'post',
 	);
-	register_post_type( 'photos', $args );
+	register_post_type( 'fullBanner', $args );
 
 }
 
-add_action( 'init', 'wpbasetheme_post_type_photos', 0 );
+add_action( 'init', 'WPBaseTheme__PostTypeFullBanner', 0 );
 
 }

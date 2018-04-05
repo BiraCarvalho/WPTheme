@@ -14,5 +14,5 @@
 ?>
 
 <?php get_header(); ?>
-<?php wpbasetheme__get_page( "about" ); ?>
+<?php WPBaseTheme___get_page( "about" ); ?>
 <?php get_footer(); ?>

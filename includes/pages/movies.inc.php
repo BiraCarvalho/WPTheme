@@ -19,7 +19,7 @@
     <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
         <article class="box">
           <a href="<?=get_the_permalink();?>">
-            <img src="<?=wpbasetheme__get_thumb_url( get_the_ID() )?>" />
+            <img src="<?=WPBaseTheme___get_thumb_url( get_the_ID() )?>" />
             <div class="legend">
               <div>
                 <h2>

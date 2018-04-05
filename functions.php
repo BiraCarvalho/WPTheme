@@ -1,5 +1,7 @@
 <?php
 
+define('ACF_EARLY_ACCESS', '5');
+
 require_once( "includes/custom/type-movies.inc.php"   );
 require_once( "includes/custom/type-photos.inc.php"   );
 

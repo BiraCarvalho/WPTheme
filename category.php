@@ -2,12 +2,11 @@
 /**
  * The template for displaying category
  *
- * @package WordPress
- * @subpackage Theme
- * @since 0.1.0
-*/
+ * @link https://codex.wordpress.org/Template_Hierarchy
+ *
+ * @package WPBaseTheme
+ */
 ?>
-
 <?php get_header(); ?>
-<?php WPBaseTheme___get_page( "category" ); ?>
+<?php WPBaseTheme___get_page( "post" ); ?>
 <?php get_footer(); ?>

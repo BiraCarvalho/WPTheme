@@ -4,6 +4,7 @@ define('ACF_EARLY_ACCESS', '5');
 
 require_once get_template_directory() . '/includes/vendor/bootstrapNavWalker/class-wp-bootstrap-navwalker.php';
 require_once get_template_directory() . '/includes/customPostTypes/fullBanner.cpt.php';
+require_once get_template_directory() . '/includes/customPostTypes/noticias.cpt.php';
 
 function WPBaseTheme___setup() {
 
@@ -49,12 +50,23 @@ function WPBaseTheme___embed_defaults() {
     );
 } add_filter( 'embed_defaults', 'WPBaseTheme___embed_defaults' );
 
-function WPBaseTheme___get_part( $slug ){
-    require_once(  get_template_directory() . "/includes/parts/{$slug}.part.php" );
+function WPBaseTheme___excerpt_length( $number ) {
+	return 100;
 }
+add_filter( 'excerpt_length', 'WPBaseTheme___excerpt_length' );
+
+function WPBaseTheme___excerpt_more( $more_string ) {
+	
+}
+add_filter( 'excerpt_more', 'WPBaseTheme___excerpt_more' );
+
 
 function WPBaseTheme___get_page( $slug ){
-    require_once(  get_template_directory() . "/includes/pages/{$slug}.inc.php" );
+    require_once(  get_template_directory() . "/includes/conteudos/{$slug}.inc.php" );
+}
+
+function WPBaseTheme___get_part( $slug ){
+    require_once(  get_template_directory() . "/includes/parts/{$slug}.part.php" );
 }
 
 function WPBaseTheme___get_image( $file_name ){

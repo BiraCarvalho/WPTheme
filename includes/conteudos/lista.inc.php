@@ -12,7 +12,7 @@
             </a>
             </h2>
             <a href="<?= get_the_permalink() ?>">
-                <img class="w-25 float-left mr-3 mb-2" src="<?=WPBaseTheme___get_thumb_url( get_the_ID() )?>" >
+                <img class="w-25 float-left mr-3 mb-2" src="<?=WPBaseTheme__get_thumb_url( get_the_ID() )?>" >
             </a>
             <?php the_excerpt() ?>            
         </article>

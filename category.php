@@ -8,5 +8,5 @@
  */
 ?>
 <?php get_header(); ?>
-<?php WPBaseTheme___get_page( "post" ); ?>
+<?php WPBaseTheme__get_page( "post" ); ?>
 <?php get_footer(); ?>

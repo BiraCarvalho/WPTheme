@@ -4,10 +4,10 @@ if ( !function_exists('WPBaseTheme__PostTypeNoticia') ) {
 	function WPBaseTheme__PostTypeNoticia() {
 
 		$labels = array(
-			'name'                  => _x( 'Noticias', 'Post Type General Name', 'wpbasetheme' ),
-			'singular_name'         => _x( 'Noticia', 'Post Type Singular Name', 'wpbasetheme' ),
-			'menu_name'             => __( 'Noticias', 'wpbasetheme' ),
-			'name_admin_bar'        => __( 'Noticia', 'wpbasetheme' ),
+			'name'                  => _x( 'Notícias', 'Post Type General Name', 'wpbasetheme' ),
+			'singular_name'         => _x( 'Notícia', 'Post Type Singular Name', 'wpbasetheme' ),
+			'menu_name'             => __( 'Notícias', 'wpbasetheme' ),
+			'name_admin_bar'        => __( 'Notícia', 'wpbasetheme' ),
 			'archives'              => __( 'Item Archives', 'wpbasetheme' ),
 			'attributes'            => __( 'Item Attributes', 'wpbasetheme' ),
 			'parent_item_colon'     => __( 'Parent Item:', 'wpbasetheme' ),
@@ -34,7 +34,7 @@ if ( !function_exists('WPBaseTheme__PostTypeNoticia') ) {
 		);
 		$args = array(
 			'label'                 => __( 'noticias', 'wpbasetheme' ),
-			'description'           => __( 'Postagem de Noticias', 'wpbasetheme' ),
+			'description'           => __( 'Postagem de Notícias', 'wpbasetheme' ),
 			'labels'                => $labels,
 			'supports'              => ['title', 'editor', 'excerpt', 'author', 'thumbnail', 'revisions'],		
 			'taxonomies'            => [ 'category' ],

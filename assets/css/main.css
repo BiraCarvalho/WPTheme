@@ -1,0 +1,46 @@
+ /*LISTAS*/
+ .lista-wrap article{
+	display: block;	
+	margin-bottom: 15px;
+	padding-bottom: 15px;
+	border-bottom: 1px dashed #cccccc;
+}
+.lista-wrap article figure{
+    margin: 0 auto 25px auto;
+	width: 100%;
+	max-width: 350px;
+	min-height: 249px;
+	box-shadow: 3px 3px 5px #666666;
+	background-color: #ffffff;
+	background-repeat: no-repeat;
+	background-size:contain;
+	background-position: center center;
+	overflow: hidden;
+}
+.lista-wrap article header a{
+	color:#333333;
+}
+.lista-wrap article header a:hover{
+	text-decoration: none;
+}
+.lista-wrap article header h2{
+	font-size: 1.4rem;
+}
+.lista-wrap article footer{
+	clear: both;
+	text-align: right;
+}
+
+
+@media screen and (min-width:991.9px) {
+
+	.lista-wrap article header figure{
+		float: left;		
+		margin: 0 25px 25px 0;
+	}
+	.lista-wrap article header p{
+		display: inline-block;
+		margin-right: 12px;
+	}	
+	
+}

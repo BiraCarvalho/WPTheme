@@ -16,6 +16,7 @@ function WPBaseTheme__setup() {
     add_theme_support('post-thumbnails');
     
     add_image_size( 'banner-principal', 2000, 500, true );
+    add_image_size( 'lista-thumb'     , 600, 480,  true );
 
 } add_action( 'after_setup_theme',  'WPBaseTheme__setup');
 
@@ -74,12 +75,12 @@ function WPBaseTheme__get_image( $file_name ){
     return  get_template_directory_uri() . "/assets/images/{$file_name}";
 }
 
-function WPBaseTheme__get_thumb_url( $post_id ){
+function WPBaseTheme__get_thumb_url( $post_id, $size = 'post-thumbnail' ){
     
-    $thumb_id = get_post_thumbnail_id( $post_id );
+    $thumb_id = get_post_thumbnail_id( $post_id, $size );
     
     if( $thumb_id ){
-        return wp_get_attachment_thumb_url( $thumb_id );
+        return get_the_post_thumbnail_url( $post_id, $size );
     }
     
     return WPBaseTheme__get_image( 'noimage.png' );
